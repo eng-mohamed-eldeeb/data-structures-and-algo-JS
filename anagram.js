@@ -8,7 +8,7 @@ function validAnagram(str1, str2) {
     all[i] ? all[i] += 1 : all[i] = 1
   };
   for (let i of str2) {
-    if (all[i] === 0 || !all[i]) {
+    if (!all[i]) {
       return false
     } else {
         all[i]--;
