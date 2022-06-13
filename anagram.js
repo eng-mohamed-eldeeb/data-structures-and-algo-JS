@@ -5,12 +5,8 @@ function validAnagram(str1, str2) {
     return false;
   }
   for (let i of str1) {
-    if (all[i] > 0) {
-      all[i]++;
-    } else {
-        all[i] = 1;
-    }
-  }
+    all[i] ? all[i] += 1 : all[i] = 1
+  };
   for (let i of str2) {
     if (all[i] === 0 || !all[i]) {
       return false
