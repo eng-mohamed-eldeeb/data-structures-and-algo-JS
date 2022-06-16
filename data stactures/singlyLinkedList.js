@@ -112,7 +112,7 @@ class SinglyLinkedList {
         this.head = this.tail;
         this.tail = node;
         var next, prev = null;
-        for (let i = 0; i < this.length; i++) {
+        while (node) {
             next = node.next;
             node.next = prev;
             prev = node;
