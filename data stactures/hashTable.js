@@ -1,0 +1,1 @@
+//Its the same fuking thing as an opject.
