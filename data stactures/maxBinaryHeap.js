@@ -8,15 +8,15 @@ class MBH {
         this.bubbleUp();
     }
         bubbleUp(){
-            let idx = this.values.length - 1;
-            const element = this.values[idx];
-            while(idx > 0){
-                let parentIdx = Math.floor((idx - 1)/2);
-                let parent = this.values[parentIdx];
+            let ind = this.values.length - 1;
+            const element = this.values[ind];
+            while(ind > 0){
+                let parentind = Math.floor((ind - 1)/2);
+                let parent = this.values[parentind];
                 if(element <= parent) break;
-                this.values[parentIdx] = element;
-                this.values[idx] = parent;
-                idx = parentIdx;
+                this.values[parentind] = element;
+                this.values[ind] = parent;
+                ind = parentind;
             }
         }
         extractMAx() {
@@ -59,12 +59,12 @@ class MBH {
 }
 
 let heap = new MBH();
-heap.insert(41);
-heap.insert(39);
-heap.insert(33);
-heap.insert(18);
-heap.insert(27);
-heap.insert(12);
-heap.insert(55);
+heap.insert(4);
+heap.insert(0);
+heap.insert(1);
+heap.insert(7);
+heap.insert(4);
+heap.insert(1);
+heap.insert(3);
 heap.extractMAx();
 console.log(heap.values);
