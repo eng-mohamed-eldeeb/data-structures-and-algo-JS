@@ -42,6 +42,25 @@ class Graph {
         RDFS(v);
         return result;
     }
+    //breadth first graph
+    BFS(v) {
+        let result = [];
+        let visited = {};
+        let queue = [v];
+        visited[v] = true;
+
+        while(queue.length) {
+            let removed = queue.shift();
+            result.push(removed);
+            this.adjacencyList[removed].forEach(e => {
+                if(!visited[e]) {
+                    visited[e] = true;
+                    queue.push(e);
+                }
+            })
+        }
+        return result;
+    }
        
 }
 
@@ -62,4 +81,4 @@ g.addEdge("D","E")
 g.addEdge("D","F")
 g.addEdge("E","F")
 
-console.log(g.DFS('A'))
+console.log(g.BFS('A'))
