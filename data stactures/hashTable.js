@@ -1,1 +1,1 @@
-//Its the same fuking thing as an opject.
+//Its the same fuking thing as an object.
